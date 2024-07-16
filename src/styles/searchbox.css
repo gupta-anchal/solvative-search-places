@@ -28,11 +28,11 @@
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
-    background: rgb(222, 226, 230);
     padding: 2px 4px;
     border-radius: 2px;
     font-size: 12px;
     color: rgb(33, 37, 41);
+    border: 1px solid rgb(206, 212, 218);
   }
   
   .searchbox.active {

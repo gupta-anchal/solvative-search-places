@@ -20,14 +20,16 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onItemsPerPageChang
   if (totalPages === 0) return null;
 
   return (
-    <div className="pagination">
-      <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
-        Previous
-      </button>
-      <span>Page {currentPage} of {totalPages}</span>
-      <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-        Next
-      </button>
+    <div className="pagination-container">
+      <div className="pagination">
+        <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
+          &lt;
+        </button>
+        <span>{currentPage} of {totalPages}</span>
+        <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+          &gt;
+        </button>
+      </div>
       <div className="items-per-page">
         <label htmlFor="itemsPerPage">Items per page: </label>
         <input

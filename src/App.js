@@ -17,6 +17,8 @@ const App = () => {
   useEffect(() => {
     if (searchQuery === '') {
       setData([]);
+      setTotalPages(1);
+      setTotalCount(0);
       return;
     }
 
@@ -68,12 +70,19 @@ const App = () => {
         variant="default"
         onSearch={handleSearch}
       />
-      {searchQuery === '' ? (
-        <div className="start-searching">Start searching</div>
-      ) : (
-        <Table data={data} isLoading={isLoading} />
+      <Table 
+        data={data} 
+        searchQuery={searchQuery} 
+        currentPage={currentPage} 
+        itemsPerPage={itemsPerPage} 
+      />
+      {isLoading && (
+        <div className="loader-container">
+          <div className="loader"></div>
+          <div>Loading...</div>
+        </div>
       )}
-      {data.length > 0 && (
+      {totalCount > 0 && (
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
