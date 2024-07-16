@@ -1,0 +1,23 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagination .items-per-page {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pagination .items-per-page input {
+    width: 50px;
+    margin-left: 5px;
+  }
+  
