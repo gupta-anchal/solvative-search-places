@@ -22,7 +22,8 @@
   margin-right: 5px;
 }
 
-.no-results, .start-searching {
+.no-results,
+.start-searching {
   text-align: center;
   margin-top: 20px;
   font-size: 16px;
@@ -48,6 +49,39 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .data-table th,
+  .data-table td {
+    padding: 6px;
+  }
+
+  .no-results,
+  .start-searching {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-table th,
+  .data-table td {
+    padding: 4px;
+  }
+
+  .no-results,
+  .start-searching {
+    font-size: 12px;
+  }
+
+  .flag {
+    width: 15px;
+    height: 10px;
+  }
 }

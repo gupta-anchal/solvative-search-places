@@ -1,47 +1,69 @@
 .searchbox {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    width: 241px;
-    height: 38px;
-    font-size: 16px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(206, 212, 218);
-    padding: 6px 12px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 241px;
+  height: 38px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.searchbox input {
+  width: calc(100% - 60px);
+  border: none;
+  outline: none;
+  font-size: inherit;
+  background: none;
+  color: rgb(33, 37, 41);
+}
+
+.searchbox .shortcut {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: rgb(33, 37, 41);
+  border: 1px solid rgb(206, 212, 218);
+}
+
+.searchbox.active {
+  border-color: #7952b3;
+  box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+}
+
+.searchbox.outline {
+  border: 1px solid #7952b3;
+  box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+}
+
+@media (max-width: 768px) {
+  .searchbox {
+    width: 200px;
+    height: 34px;
+    font-size: 14px;
   }
-  
-  .searchbox input {
-    width: calc(100% - 60px);
-    border: none;
-    outline: none;
-    font-size: inherit;
-    background: none;
-    color: rgb(33, 37, 41);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-  
+
   .searchbox .shortcut {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 2px 4px;
-    border-radius: 2px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchbox {
+    width: 180px;
+    height: 30px;
     font-size: 12px;
-    color: rgb(33, 37, 41);
-    border: 1px solid rgb(206, 212, 218);
   }
-  
-  .searchbox.active {
-    border-color: #7952b3;
-    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+
+  .searchbox .shortcut {
+    font-size: 8px;
   }
-  
-  .searchbox.outline {
-    border: 1px solid #7952b3;
-    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
-  }
-  
+}
